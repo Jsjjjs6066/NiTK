@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Natjecanja iz TK – zadaci i rješenja</title>
+<style>
+.file-option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  height: 1.5em;
+}
+.file-option + .file-option { border-top: 1px solid #ccc; }
+.file-option.selected { background-color: lightgreen; }
+</style>
+</head>
+<body>
+<h1>Natjecanja iz tehničke kulture</h1>
+<p>Z = zadaci, R = rješenja, – = još nije dostupno</p>
+
+<p>
+  Preuzmi:
+  <label><input type="radio" name="t" value="both" checked> oboje</label>
+  <label><input type="radio" name="t" value="z"> zadaci</label>
+  <label><input type="radio" name="t" value="r"> rješenja</label>
+</p>
+
+<div style="overflow-x:auto; white-space: nowrap;"><table id="tbl" border="1" cellpadding="4" cellspacing="0">
+<thead><tr><th rowspan="2">Godina</th>
+<th colspan="4"><label><input type="checkbox" data-lvl="s"> Školsko</label></th>
+<th colspan="4"><label><input type="checkbox" data-lvl="z"> Županijsko</label></th>
+<th colspan="4"><label><input type="checkbox" data-lvl="d"> Državno</label></th>
+</tr><tr>
+<th><label><input type="checkbox" data-lvl="s" data-gr="5"> 5.</label></th>
+<th><label><input type="checkbox" data-lvl="s" data-gr="6"> 6.</label></th>
+<th><label><input type="checkbox" data-lvl="s" data-gr="7"> 7.</label></th>
+<th><label><input type="checkbox" data-lvl="s" data-gr="8"> 8.</label></th>
+<th><label><input type="checkbox" data-lvl="z" data-gr="5"> 5.</label></th>
+<th><label><input type="checkbox" data-lvl="z" data-gr="6"> 6.</label></th>
+<th><label><input type="checkbox" data-lvl="z" data-gr="7"> 7.</label></th>
+<th><label><input type="checkbox" data-lvl="z" data-gr="8"> 8.</label></th>
+<th><label><input type="checkbox" data-lvl="d" data-gr="5"> 5.</label></th>
+<th><label><input type="checkbox" data-lvl="d" data-gr="6"> 6.</label></th>
+<th><label><input type="checkbox" data-lvl="d" data-gr="7"> 7.</label></th>
+<th><label><input type="checkbox" data-lvl="d" data-gr="8"> 8.</label></th>
+</tr></thead><tbody>
+<tr><td><label><input type="checkbox" data-yr="2025./2026. (68.)"> 2025./2026. (68.)</label></td>
+<td align="center">
+<span class="file-option">–</span>
+<span class="file-option">–</span>
+</td>
+<td align="center">
+<span class="file-option">–</span>
+<span class="file-option">–</span>
+</td>
+<td align="center">
+<span class="file-option">–</span>
+<span class="file-option">–</span>
+</td>
+<td align="center">
+<span class="file-option">–</span>
+<span class="file-option">–</span>
+</td>
+<td align="center">
+<span class="file-option">–</span>
+<span class="file-option">–</span>
+</td>
+<td align="center">
+<span class="file-option">–</span>
+<span class="file-option">–</span>
+</td>
+<td align="center">
+<span class="file-option">–</span>
+<span class="file-option">–</span>
+</td>
+<td align="center">
+<span class="file-option">–</span>
+<span class="file-option">–</span>
+</td>
+<td align="center">
+<span class="file-option">–</span>
+<span class="file-option">–</span>
+</td>
+<td align="center">
+<span class="file-option">–</span>
+<span class="file-option">–</span>
+</td>
+<td align="center">
+<span class="file-option">–</span>
+<span class="file-option">–</span>
+</td>
+<td align="center">
+<span class="file-option">–</span>
+<span class="file-option">–</span>
+</td>
+</tr>
+<tr><td><label><input type="checkbox" data-yr="2024./2025. (67.)"> 2024./2025. (67.)</label></td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2024./2025. (67.)|s|5|z"><a href="natjecanja/tk_2024_skolsko_5r_zadaci.pdf" target="_blank" title="Zadaci, 5. razred, školsko, 2024./2025. (67.)">Z</a></label></span>
+<span class="file-option"><label><input type="checkbox" data-file="2024./2025. (67.)|s|5|r"><a href="natjecanja/tk_2024_skolsko_5r_rjesenja.pdf" target="_blank" title="Rješenja, 5. razred, školsko, 2024./2025. (67.)">R</a></label></span>
+</td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2024./2025. (67.)|s|6|z"><a href="natjecanja/tk_2024_skolsko_6r_zadaci.pdf" target="_blank" title="Zadaci, 6. razred, školsko, 2024./2025. (67.)">Z</a></label></span>
+<span class="file-option"><label><input type="checkbox" data-file="2024./2025. (67.)|s|6|r"><a href="natjecanja/tk_2024_skolsko_6r_rjesenja.pdf" target="_blank" title="Rješenja, 6. razred, školsko, 2024./2025. (67.)">R</a></label></span>
+</td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2024./2025. (67.)|s|7|z"><a href="natjecanja/tk_2024_skolsko_7r_zadaci.pdf" target="_blank" title="Zadaci, 7. razred, školsko, 2024./2025. (67.)">Z</a></label></span>
+<span class="file-option"><label><input type="checkbox" data-file="2024./2025. (67.)|s|7|r"><a href="natjecanja/tk_2024_skolsko_7r_rjesenja.pdf" target="_blank" title="Rješenja, 7. razred, školsko, 2024./2025. (67.)">R</a></label></span>
+</td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2024./2025. (67.)|s|8|z"><a href="natjecanja/tk_2024_skolsko_8r_zadaci.pdf" target="_blank" title="Zadaci, 8. razred, školsko, 2024./2025. (67.)">Z</a></label></span>
+<span class="file-option"><label><input type="checkbox" data-file="2024./2025. (67.)|s|8|r"><a href="natjecanja/tk_2024_skolsko_8r_rjesenja.pdf" target="_blank" title="Rješenja, 8. razred, školsko, 2024./2025. (67.)">R</a></label></span>
+</td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2024./2025. (67.)|z|5|z"><a href="natjecanja/tk_2024_zupanijsko_5r_zadaci.pdf" target="_blank" title="Zadaci, 5. razred, županijsko, 2024./2025. (67.)">Z</a></label></span>
+<span class="file-option"><label><input type="checkbox" data-file="2024./2025. (67.)|z|5|r"><a href="natjecanja/tk_2024_zupanijsko_5r_rjesenja.pdf" target="_blank" title="Rješenja, 5. razred, županijsko, 2024./2025. (67.)">R</a></label></span>
+</td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2024./2025. (67.)|z|6|z"><a href="natjecanja/tk_2024_zupanijsko_6r_zadaci.pdf" target="_blank" title="Zadaci, 6. razred, županijsko, 2024./2025. (67.)">Z</a></label></span>
+<span class="file-option"><label><input type="checkbox" data-file="2024./2025. (67.)|z|6|r"><a href="natjecanja/tk_2024_zupanijsko_6r_rjesenja.pdf" target="_blank" title="Rješenja, 6. razred, županijsko, 2024./2025. (67.)">R</a></label></span>
+</td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2024./2025. (67.)|z|7|z"><a href="natjecanja/tk_2024_zupanijsko_7r_zadaci.pdf" target="_blank" title="Zadaci, 7. razred, županijsko, 2024./2025. (67.)">Z</a></label></span>
+<span class="file-option"><label><input type="checkbox" data-file="2024./2025. (67.)|z|7|r"><a href="natjecanja/tk_2024_zupanijsko_7r_rjesenja.pdf" target="_blank" title="Rješenja, 7. razred, županijsko, 2024./2025. (67.)">R</a></label></span>
+</td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2024./2025. (67.)|z|8|z"><a href="natjecanja/tk_2024_zupanijsko_8r_zadaci.pdf" target="_blank" title="Zadaci, 8. razred, županijsko, 2024./2025. (67.)">Z</a></label></span>
+<span class="file-option"><label><input type="checkbox" data-file="2024./2025. (67.)|z|8|r"><a href="natjecanja/tk_2024_zupanijsko_8r_rjesenja.pdf" target="_blank" title="Rješenja, 8. razred, županijsko, 2024./2025. (67.)">R</a></label></span>
+</td>
+<td align="center">
+<span class="file-option">–</span>
+<span class="file-option">–</span>
+</td>
+<td align="center">
+<span class="file-option">–</span>
+<span class="file-option">–</span>
+</td>
+<td align="center">
+<span class="file-option">–</span>
+<span class="file-option">–</span>
+</td>
+<td align="center">
+<span class="file-option">–</span>
+<span class="file-option">–</span>
+</td>
+</tr>
+<tr><td><label><input type="checkbox" data-yr="2023./2024. (66.)"> 2023./2024. (66.)</label></td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2023./2024. (66.)|s|5|z"><a href="natjecanja/tk_2023_skolsko_5r_zadaci.pdf" target="_blank" title="Zadaci, 5. razred, školsko, 2023./2024. (66.)">Z</a></label></span>
+<span class="file-option"><label><input type="checkbox" data-file="2023./2024. (66.)|s|5|r"><a href="natjecanja/tk_2023_skolsko_5r_rjesenja.pdf" target="_blank" title="Rješenja, 5. razred, školsko, 2023./2024. (66.)">R</a></label></span>
+</td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2023./2024. (66.)|s|6|z"><a href="natjecanja/tk_2023_skolsko_6r_zadaci.pdf" target="_blank" title="Zadaci, 6. razred, školsko, 2023./2024. (66.)">Z</a></label></span>
+<span class="file-option"><label><input type="checkbox" data-file="2023./2024. (66.)|s|6|r"><a href="natjecanja/tk_2023_skolsko_6r_rjesenja.pdf" target="_blank" title="Rješenja, 6. razred, školsko, 2023./2024. (66.)">R</a></label></span>
+</td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2023./2024. (66.)|s|7|z"><a href="natjecanja/tk_2023_skolsko_7r_zadaci.pdf" target="_blank" title="Zadaci, 7. razred, školsko, 2023./2024. (66.)">Z</a></label></span>
+<span class="file-option"><label><input type="checkbox" data-file="2023./2024. (66.)|s|7|r"><a href="natjecanja/tk_2023_skolsko_7r_rjesenja.pdf" target="_blank" title="Rješenja, 7. razred, školsko, 2023./2024. (66.)">R</a></label></span>
+</td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2023./2024. (66.)|s|8|z"><a href="natjecanja/tk_2023_skolsko_8r_zadaci.pdf" target="_blank" title="Zadaci, 8. razred, školsko, 2023./2024. (66.)">Z</a></label></span>
+<span class="file-option"><label><input type="checkbox" data-file="2023./2024. (66.)|s|8|r"><a href="natjecanja/tk_2023_skolsko_8r_rjesenja.pdf" target="_blank" title="Rješenja, 8. razred, školsko, 2023./2024. (66.)">R</a></label></span>
+</td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2023./2024. (66.)|z|5|z"><a href="natjecanja/tk_2023_zupanijsko_5r_zadaci.pdf" target="_blank" title="Zadaci, 5. razred, županijsko, 2023./2024. (66.)">Z</a></label></span>
+<span class="file-option">–</span>
+</td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2023./2024. (66.)|z|6|z"><a href="natjecanja/tk_2023_zupanijsko_6r_zadaci.pdf" target="_blank" title="Zadaci, 6. razred, županijsko, 2023./2024. (66.)">Z</a></label></span>
+<span class="file-option">–</span>
+</td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2023./2024. (66.)|z|7|z"><a href="natjecanja/tk_2023_zupanijsko_7r_zadaci.pdf" target="_blank" title="Zadaci, 7. razred, županijsko, 2023./2024. (66.)">Z</a></label></span>
+<span class="file-option">–</span>
+</td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2023./2024. (66.)|z|8|z"><a href="natjecanja/tk_2023_zupanijsko_8r_zadaci.pdf" target="_blank" title="Zadaci, 8. razred, županijsko, 2023./2024. (66.)">Z</a></label></span>
+<span class="file-option">–</span>
+</td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2023./2024. (66.)|d|5|z"><a href="natjecanja/tk_2023_drzavno_5r_zadaci.pdf" target="_blank" title="Zadaci, 5. razred, državno, 2023./2024. (66.)">Z</a></label></span>
+<span class="file-option"><label><input type="checkbox" data-file="2023./2024. (66.)|d|5|r"><a href="natjecanja/tk_2023_drzavno_5r_rjesenja.pdf" target="_blank" title="Rješenja, 5. razred, državno, 2023./2024. (66.)">R</a></label></span>
+</td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2023./2024. (66.)|d|6|z"><a href="natjecanja/tk_2023_drzavno_6r_zadaci.pdf" target="_blank" title="Zadaci, 6. razred, državno, 2023./2024. (66.)">Z</a></label></span>
+<span class="file-option"><label><input type="checkbox" data-file="2023./2024. (66.)|d|6|r"><a href="natjecanja/tk_2023_drzavno_6r_rjesenja.pdf" target="_blank" title="Rješenja, 6. razred, državno, 2023./2024. (66.)">R</a></label></span>
+</td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2023./2024. (66.)|d|7|z"><a href="natjecanja/tk_2023_drzavno_7r_zadaci.pdf" target="_blank" title="Zadaci, 7. razred, državno, 2023./2024. (66.)">Z</a></label></span>
+<span class="file-option"><label><input type="checkbox" data-file="2023./2024. (66.)|d|7|r"><a href="natjecanja/tk_2023_drzavno_7r_rjesenja.pdf" target="_blank" title="Rješenja, 7. razred, državno, 2023./2024. (66.)">R</a></label></span>
+</td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2023./2024. (66.)|d|8|z"><a href="natjecanja/tk_2023_drzavno_8r_zadaci.pdf" target="_blank" title="Zadaci, 8. razred, državno, 2023./2024. (66.)">Z</a></label></span>
+<span class="file-option"><label><input type="checkbox" data-file="2023./2024. (66.)|d|8|r"><a href="natjecanja/tk_2023_drzavno_8r_rjesenja.pdf" target="_blank" title="Rješenja, 8. razred, državno, 2023./2024. (66.)">R</a></label></span>
+</td>
+</tr>
+<tr><td><label><input type="checkbox" data-yr="2022./2023. (65.)"> 2022./2023. (65.)</label></td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2022./2023. (65.)|s|5|z"><a href="natjecanja/tk_2022_skolsko_5r_zadaci.pdf" target="_blank" title="Zadaci, 5. razred, školsko, 2022./2023. (65.)">Z</a></label></span>
+<span class="file-option"><label><input type="checkbox" data-file="2022./2023. (65.)|s|5|r"><a href="natjecanja/tk_2022_skolsko_5r_rjesenja.pdf" target="_blank" title="Rješenja, 5. razred, školsko, 2022./2023. (65.)">R</a></label></span>
+</td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2022./2023. (65.)|s|6|z"><a href="natjecanja/tk_2022_skolsko_6r_zadaci.pdf" target="_blank" title="Zadaci, 6. razred, školsko, 2022./2023. (65.)">Z</a></label></span>
+<span class="file-option"><label><input type="checkbox" data-file="2022./2023. (65.)|s|6|r"><a href="natjecanja/tk_2022_skolsko_6r_rjesenja.pdf" target="_blank" title="Rješenja, 6. razred, školsko, 2022./2023. (65.)">R</a></label></span>
+</td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2022./2023. (65.)|s|7|z"><a href="natjecanja/tk_2022_skolsko_7r_zadaci.pdf" target="_blank" title="Zadaci, 7. razred, školsko, 2022./2023. (65.)">Z</a></label></span>
+<span class="file-option"><label><input type="checkbox" data-file="2022./2023. (65.)|s|7|r"><a href="natjecanja/tk_2022_skolsko_7r_rjesenja.pdf" target="_blank" title="Rješenja, 7. razred, školsko, 2022./2023. (65.)">R</a></label></span>
+</td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2022./2023. (65.)|s|8|z"><a href="natjecanja/tk_2022_skolsko_8r_zadaci.pdf" target="_blank" title="Zadaci, 8. razred, školsko, 2022./2023. (65.)">Z</a></label></span>
+<span class="file-option"><label><input type="checkbox" data-file="2022./2023. (65.)|s|8|r"><a href="natjecanja/tk_2022_skolsko_8r_rjesenja.pdf" target="_blank" title="Rješenja, 8. razred, školsko, 2022./2023. (65.)">R</a></label></span>
+</td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2022./2023. (65.)|z|5|z"><a href="natjecanja/tk_2022_zupanijsko_5r_zadaci.pdf" target="_blank" title="Zadaci, 5. razred, županijsko, 2022./2023. (65.)">Z</a></label></span>
+<span class="file-option"><label><input type="checkbox" data-file="2022./2023. (65.)|z|5|r"><a href="natjecanja/tk_2022_zupanijsko_5r_rjesenja.pdf" target="_blank" title="Rješenja, 5. razred, županijsko, 2022./2023. (65.)">R</a></label></span>
+</td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2022./2023. (65.)|z|6|z"><a href="natjecanja/tk_2022_zupanijsko_6r_zadaci.pdf" target="_blank" title="Zadaci, 6. razred, županijsko, 2022./2023. (65.)">Z</a></label></span>
+<span class="file-option"><label><input type="checkbox" data-file="2022./2023. (65.)|z|6|r"><a href="natjecanja/tk_2022_zupanijsko_6r_rjesenja.pdf" target="_blank" title="Rješenja, 6. razred, županijsko, 2022./2023. (65.)">R</a></label></span>
+</td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2022./2023. (65.)|z|7|z"><a href="natjecanja/tk_2022_zupanijsko_7r_zadaci.pdf" target="_blank" title="Zadaci, 7. razred, županijsko, 2022./2023. (65.)">Z</a></label></span>
+<span class="file-option"><label><input type="checkbox" data-file="2022./2023. (65.)|z|7|r"><a href="natjecanja/tk_2022_zupanijsko_7r_rjesenja.pdf" target="_blank" title="Rješenja, 7. razred, županijsko, 2022./2023. (65.)">R</a></label></span>
+</td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2022./2023. (65.)|z|8|z"><a href="natjecanja/tk_2022_zupanijsko_8r_zadaci.pdf" target="_blank" title="Zadaci, 8. razred, županijsko, 2022./2023. (65.)">Z</a></label></span>
+<span class="file-option"><label><input type="checkbox" data-file="2022./2023. (65.)|z|8|r"><a href="natjecanja/tk_2022_zupanijsko_8r_rjesenja.pdf" target="_blank" title="Rješenja, 8. razred, županijsko, 2022./2023. (65.)">R</a></label></span>
+</td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2022./2023. (65.)|d|5|z"><a href="natjecanja/tk_2022_drzavno_5r_zadaci.pdf" target="_blank" title="Zadaci, 5. razred, državno, 2022./2023. (65.)">Z</a></label></span>
+<span class="file-option"><label><input type="checkbox" data-file="2022./2023. (65.)|d|5|r"><a href="natjecanja/tk_2022_drzavno_5r_rjesenja.pdf" target="_blank" title="Rješenja, 5. razred, državno, 2022./2023. (65.)">R</a></label></span>
+</td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2022./2023. (65.)|d|6|z"><a href="natjecanja/tk_2022_drzavno_6r_zadaci.pdf" target="_blank" title="Zadaci, 6. razred, državno, 2022./2023. (65.)">Z</a></label></span>
+<span class="file-option"><label><input type="checkbox" data-file="2022./2023. (65.)|d|6|r"><a href="natjecanja/tk_2022_drzavno_6r_rjesenja.pdf" target="_blank" title="Rješenja, 6. razred, državno, 2022./2023. (65.)">R</a></label></span>
+</td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2022./2023. (65.)|d|7|z"><a href="natjecanja/tk_2022_drzavno_7r_zadaci.pdf" target="_blank" title="Zadaci, 7. razred, državno, 2022./2023. (65.)">Z</a></label></span>
+<span class="file-option"><label><input type="checkbox" data-file="2022./2023. (65.)|d|7|r"><a href="natjecanja/tk_2022_drzavno_7r_rjesenja.pdf" target="_blank" title="Rješenja, 7. razred, državno, 2022./2023. (65.)">R</a></label></span>
+</td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2022./2023. (65.)|d|8|z"><a href="natjecanja/tk_2022_drzavno_8r_zadaci.pdf" target="_blank" title="Zadaci, 8. razred, državno, 2022./2023. (65.)">Z</a></label></span>
+<span class="file-option"><label><input type="checkbox" data-file="2022./2023. (65.)|d|8|r"><a href="natjecanja/tk_2022_drzavno_8r_rjesenja.pdf" target="_blank" title="Rješenja, 8. razred, državno, 2022./2023. (65.)">R</a></label></span>
+</td>
+</tr>
+<tr><td><label><input type="checkbox" data-yr="2021./2022. (64.)"> 2021./2022. (64.)</label></td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2021./2022. (64.)|s|5|z"><a href="natjecanja/tk_2021_skolsko_5r_zadaci.pdf" target="_blank" title="Zadaci, 5. razred, školsko, 2021./2022. (64.)">Z</a></label></span>
+<span class="file-option"><label><input type="checkbox" data-file="2021./2022. (64.)|s|5|r"><a href="natjecanja/tk_2021_skolsko_5r_rjesenja.pdf" target="_blank" title="Rješenja, 5. razred, školsko, 2021./2022. (64.)">R</a></label></span>
+</td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2021./2022. (64.)|s|6|z"><a href="natjecanja/tk_2021_skolsko_6r_zadaci.pdf" target="_blank" title="Zadaci, 6. razred, školsko, 2021./2022. (64.)">Z</a></label></span>
+<span class="file-option"><label><input type="checkbox" data-file="2021./2022. (64.)|s|6|r"><a href="natjecanja/tk_2021_skolsko_6r_rjesenja.pdf" target="_blank" title="Rješenja, 6. razred, školsko, 2021./2022. (64.)">R</a></label></span>
+</td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2021./2022. (64.)|s|7|z"><a href="natjecanja/tk_2021_skolsko_7r_zadaci.pdf" target="_blank" title="Zadaci, 7. razred, školsko, 2021./2022. (64.)">Z</a></label></span>
+<span class="file-option"><label><input type="checkbox" data-file="2021./2022. (64.)|s|7|r"><a href="natjecanja/tk_2021_skolsko_7r_rjesenja.pdf" target="_blank" title="Rješenja, 7. razred, školsko, 2021./2022. (64.)">R</a></label></span>
+</td>
+<td align="center">
+<span class="file-option">–</span>
+<span class="file-option">–</span>
+</td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2021./2022. (64.)|z|5|z"><a href="natjecanja/tk_2021_zupanijsko_5r_zadaci.pdf" target="_blank" title="Zadaci, 5. razred, županijsko, 2021./2022. (64.)">Z</a></label></span>
+<span class="file-option"><label><input type="checkbox" data-file="2021./2022. (64.)|z|5|r"><a href="natjecanja/tk_2021_zupanijsko_5r_rjesenja.pdf" target="_blank" title="Rješenja, 5. razred, županijsko, 2021./2022. (64.)">R</a></label></span>
+</td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2021./2022. (64.)|z|6|z"><a href="natjecanja/tk_2021_zupanijsko_6r_zadaci.pdf" target="_blank" title="Zadaci, 6. razred, županijsko, 2021./2022. (64.)">Z</a></label></span>
+<span class="file-option"><label><input type="checkbox" data-file="2021./2022. (64.)|z|6|r"><a href="natjecanja/tk_2021_zupanijsko_6r_rjesenja.pdf" target="_blank" title="Rješenja, 6. razred, županijsko, 2021./2022. (64.)">R</a></label></span>
+</td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2021./2022. (64.)|z|7|z"><a href="natjecanja/tk_2021_zupanijsko_7r_zadaci.pdf" target="_blank" title="Zadaci, 7. razred, županijsko, 2021./2022. (64.)">Z</a></label></span>
+<span class="file-option"><label><input type="checkbox" data-file="2021./2022. (64.)|z|7|r"><a href="natjecanja/tk_2021_zupanijsko_7r_rjesenja.pdf" target="_blank" title="Rješenja, 7. razred, županijsko, 2021./2022. (64.)">R</a></label></span>
+</td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2021./2022. (64.)|z|8|z"><a href="natjecanja/tk_2021_zupanijsko_8r_zadaci.pdf" target="_blank" title="Zadaci, 8. razred, županijsko, 2021./2022. (64.)">Z</a></label></span>
+<span class="file-option"><label><input type="checkbox" data-file="2021./2022. (64.)|z|8|r"><a href="natjecanja/tk_2021_zupanijsko_8r_rjesenja.pdf" target="_blank" title="Rješenja, 8. razred, županijsko, 2021./2022. (64.)">R</a></label></span>
+</td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2021./2022. (64.)|d|5|z"><a href="natjecanja/tk_2021_drzavno_5r_zadaci.pdf" target="_blank" title="Zadaci, 5. razred, državno, 2021./2022. (64.)">Z</a></label></span>
+<span class="file-option"><label><input type="checkbox" data-file="2021./2022. (64.)|d|5|r"><a href="natjecanja/tk_2021_drzavno_5r_rjesenja.pdf" target="_blank" title="Rješenja, 5. razred, državno, 2021./2022. (64.)">R</a></label></span>
+</td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2021./2022. (64.)|d|6|z"><a href="natjecanja/tk_2021_drzavno_6r_zadaci.pdf" target="_blank" title="Zadaci, 6. razred, državno, 2021./2022. (64.)">Z</a></label></span>
+<span class="file-option"><label><input type="checkbox" data-file="2021./2022. (64.)|d|6|r"><a href="natjecanja/tk_2021_drzavno_6r_rjesenja.pdf" target="_blank" title="Rješenja, 6. razred, državno, 2021./2022. (64.)">R</a></label></span>
+</td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2021./2022. (64.)|d|7|z"><a href="natjecanja/tk_2021_drzavno_7r_zadaci.pdf" target="_blank" title="Zadaci, 7. razred, državno, 2021./2022. (64.)">Z</a></label></span>
+<span class="file-option"><label><input type="checkbox" data-file="2021./2022. (64.)|d|7|r"><a href="natjecanja/tk_2021_drzavno_7r_rjesenja.pdf" target="_blank" title="Rješenja, 7. razred, državno, 2021./2022. (64.)">R</a></label></span>
+</td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2021./2022. (64.)|d|8|z"><a href="natjecanja/tk_2021_drzavno_8r_zadaci.pdf" target="_blank" title="Zadaci, 8. razred, državno, 2021./2022. (64.)">Z</a></label></span>
+<span class="file-option"><label><input type="checkbox" data-file="2021./2022. (64.)|d|8|r"><a href="natjecanja/tk_2021_drzavno_8r_rjesenja.pdf" target="_blank" title="Rješenja, 8. razred, državno, 2021./2022. (64.)">R</a></label></span>
+</td>
+</tr>
+<tr><td><label><input type="checkbox" data-yr="2020./2021. (63.)"> 2020./2021. (63.)</label></td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2020./2021. (63.)|s|5|z"><a href="natjecanja/tk_2020_skolsko_5r_zadaci.pdf" target="_blank" title="Zadaci, 5. razred, školsko, 2020./2021. (63.)">Z</a></label></span>
+<span class="file-option"><label><input type="checkbox" data-file="2020./2021. (63.)|s|5|r"><a href="natjecanja/tk_2020_skolsko_5r_rjesenja.pdf" target="_blank" title="Rješenja, 5. razred, školsko, 2020./2021. (63.)">R</a></label></span>
+</td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2020./2021. (63.)|s|6|z"><a href="natjecanja/tk_2020_skolsko_6r_zadaci.pdf" target="_blank" title="Zadaci, 6. razred, školsko, 2020./2021. (63.)">Z</a></label></span>
+<span class="file-option"><label><input type="checkbox" data-file="2020./2021. (63.)|s|6|r"><a href="natjecanja/tk_2020_skolsko_6r_rjesenja.pdf" target="_blank" title="Rješenja, 6. razred, školsko, 2020./2021. (63.)">R</a></label></span>
+</td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2020./2021. (63.)|s|7|z"><a href="natjecanja/tk_2020_skolsko_7r_zadaci.pdf" target="_blank" title="Zadaci, 7. razred, školsko, 2020./2021. (63.)">Z</a></label></span>
+<span class="file-option"><label><input type="checkbox" data-file="2020./2021. (63.)|s|7|r"><a href="natjecanja/tk_2020_skolsko_7r_rjesenja.pdf" target="_blank" title="Rješenja, 7. razred, školsko, 2020./2021. (63.)">R</a></label></span>
+</td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2020./2021. (63.)|s|8|z"><a href="natjecanja/tk_2020_skolsko_8r_zadaci.pdf" target="_blank" title="Zadaci, 8. razred, školsko, 2020./2021. (63.)">Z</a></label></span>
+<span class="file-option"><label><input type="checkbox" data-file="2020./2021. (63.)|s|8|r"><a href="natjecanja/tk_2020_skolsko_8r_rjesenja.pdf" target="_blank" title="Rješenja, 8. razred, školsko, 2020./2021. (63.)">R</a></label></span>
+</td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2020./2021. (63.)|z|5|z"><a href="natjecanja/tk_2020_zupanijsko_5r_zadaci.pdf" target="_blank" title="Zadaci, 5. razred, županijsko, 2020./2021. (63.)">Z</a></label></span>
+<span class="file-option"><label><input type="checkbox" data-file="2020./2021. (63.)|z|5|r"><a href="natjecanja/tk_2020_zupanijsko_5r_rjesenja.pdf" target="_blank" title="Rješenja, 5. razred, županijsko, 2020./2021. (63.)">R</a></label></span>
+</td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2020./2021. (63.)|z|6|z"><a href="natjecanja/tk_2020_zupanijsko_6r_zadaci.pdf" target="_blank" title="Zadaci, 6. razred, županijsko, 2020./2021. (63.)">Z</a></label></span>
+<span class="file-option"><label><input type="checkbox" data-file="2020./2021. (63.)|z|6|r"><a href="natjecanja/tk_2020_zupanijsko_6r_rjesenja.pdf" target="_blank" title="Rješenja, 6. razred, županijsko, 2020./2021. (63.)">R</a></label></span>
+</td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2020./2021. (63.)|z|7|z"><a href="natjecanja/tk_2020_zupanijsko_7r_zadaci.pdf" target="_blank" title="Zadaci, 7. razred, županijsko, 2020./2021. (63.)">Z</a></label></span>
+<span class="file-option"><label><input type="checkbox" data-file="2020./2021. (63.)|z|7|r"><a href="natjecanja/tk_2020_zupanijsko_7r_rjesenja.pdf" target="_blank" title="Rješenja, 7. razred, županijsko, 2020./2021. (63.)">R</a></label></span>
+</td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2020./2021. (63.)|z|8|z"><a href="natjecanja/tk_2020_zupanijsko_8r_zadaci.pdf" target="_blank" title="Zadaci, 8. razred, županijsko, 2020./2021. (63.)">Z</a></label></span>
+<span class="file-option"><label><input type="checkbox" data-file="2020./2021. (63.)|z|8|r"><a href="natjecanja/tk_2020_zupanijsko_8r_rjesenja.pdf" target="_blank" title="Rješenja, 8. razred, županijsko, 2020./2021. (63.)">R</a></label></span>
+</td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2020./2021. (63.)|d|5|z"><a href="natjecanja/tk_2020_drzavno_5r_zadaci.pdf" target="_blank" title="Zadaci, 5. razred, državno, 2020./2021. (63.)">Z</a></label></span>
+<span class="file-option"><label><input type="checkbox" data-file="2020./2021. (63.)|d|5|r"><a href="natjecanja/tk_2020_drzavno_5r_rjesenja.pdf" target="_blank" title="Rješenja, 5. razred, državno, 2020./2021. (63.)">R</a></label></span>
+</td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2020./2021. (63.)|d|6|z"><a href="natjecanja/tk_2020_drzavno_6r_zadaci.pdf" target="_blank" title="Zadaci, 6. razred, državno, 2020./2021. (63.)">Z</a></label></span>
+<span class="file-option"><label><input type="checkbox" data-file="2020./2021. (63.)|d|6|r"><a href="natjecanja/tk_2020_drzavno_6r_rjesenja.pdf" target="_blank" title="Rješenja, 6. razred, državno, 2020./2021. (63.)">R</a></label></span>
+</td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2020./2021. (63.)|d|7|z"><a href="natjecanja/tk_2020_drzavno_7r_zadaci.pdf" target="_blank" title="Zadaci, 7. razred, državno, 2020./2021. (63.)">Z</a></label></span>
+<span class="file-option"><label><input type="checkbox" data-file="2020./2021. (63.)|d|7|r"><a href="natjecanja/tk_2020_drzavno_7r_rjesenja.pdf" target="_blank" title="Rješenja, 7. razred, državno, 2020./2021. (63.)">R</a></label></span>
+</td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2020./2021. (63.)|d|8|z"><a href="natjecanja/tk_2020_drzavno_8r_zadaci.pdf" target="_blank" title="Zadaci, 8. razred, državno, 2020./2021. (63.)">Z</a></label></span>
+<span class="file-option"><label><input type="checkbox" data-file="2020./2021. (63.)|d|8|r"><a href="natjecanja/tk_2020_drzavno_8r_rjesenja.pdf" target="_blank" title="Rješenja, 8. razred, državno, 2020./2021. (63.)">R</a></label></span>
+</td>
+</tr>
+<tr><td><label><input type="checkbox" data-yr="2019./2020. (62.)"> 2019./2020. (62.)</label></td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2019./2020. (62.)|s|5|z"><a href="natjecanja/tk_2019_skolsko_5r_zadaci.pdf" target="_blank" title="Zadaci, 5. razred, školsko, 2019./2020. (62.)">Z</a></label></span>
+<span class="file-option"><label><input type="checkbox" data-file="2019./2020. (62.)|s|5|r"><a href="natjecanja/tk_2019_skolsko_5r_rjesenja.pdf" target="_blank" title="Rješenja, 5. razred, školsko, 2019./2020. (62.)">R</a></label></span>
+</td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2019./2020. (62.)|s|6|z"><a href="natjecanja/tk_2019_skolsko_6r_zadaci.pdf" target="_blank" title="Zadaci, 6. razred, školsko, 2019./2020. (62.)">Z</a></label></span>
+<span class="file-option"><label><input type="checkbox" data-file="2019./2020. (62.)|s|6|r"><a href="natjecanja/tk_2019_skolsko_6r_rjesenja.pdf" target="_blank" title="Rješenja, 6. razred, školsko, 2019./2020. (62.)">R</a></label></span>
+</td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2019./2020. (62.)|s|7|z"><a href="natjecanja/tk_2019_skolsko_7r_zadaci.pdf" target="_blank" title="Zadaci, 7. razred, školsko, 2019./2020. (62.)">Z</a></label></span>
+<span class="file-option"><label><input type="checkbox" data-file="2019./2020. (62.)|s|7|r"><a href="natjecanja/tk_2019_skolsko_7r_rjesenja.pdf" target="_blank" title="Rješenja, 7. razred, školsko, 2019./2020. (62.)">R</a></label></span>
+</td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2019./2020. (62.)|s|8|z"><a href="natjecanja/tk_2019_skolsko_8r_zadaci.pdf" target="_blank" title="Zadaci, 8. razred, školsko, 2019./2020. (62.)">Z</a></label></span>
+<span class="file-option"><label><input type="checkbox" data-file="2019./2020. (62.)|s|8|r"><a href="natjecanja/tk_2019_skolsko_8r_rjesenja.pdf" target="_blank" title="Rješenja, 8. razred, školsko, 2019./2020. (62.)">R</a></label></span>
+</td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2019./2020. (62.)|z|5|z"><a href="natjecanja/tk_2019_zupanijsko_5r_zadaci.pdf" target="_blank" title="Zadaci, 5. razred, županijsko, 2019./2020. (62.)">Z</a></label></span>
+<span class="file-option"><label><input type="checkbox" data-file="2019./2020. (62.)|z|5|r"><a href="natjecanja/tk_2019_zupanijsko_5r_rjesenja.pdf" target="_blank" title="Rješenja, 5. razred, županijsko, 2019./2020. (62.)">R</a></label></span>
+</td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2019./2020. (62.)|z|6|z"><a href="natjecanja/tk_2019_zupanijsko_6r_zadaci.pdf" target="_blank" title="Zadaci, 6. razred, županijsko, 2019./2020. (62.)">Z</a></label></span>
+<span class="file-option"><label><input type="checkbox" data-file="2019./2020. (62.)|z|6|r"><a href="natjecanja/tk_2019_zupanijsko_6r_rjesenja.pdf" target="_blank" title="Rješenja, 6. razred, županijsko, 2019./2020. (62.)">R</a></label></span>
+</td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2019./2020. (62.)|z|7|z"><a href="natjecanja/tk_2019_zupanijsko_7r_zadaci.pdf" target="_blank" title="Zadaci, 7. razred, županijsko, 2019./2020. (62.)">Z</a></label></span>
+<span class="file-option"><label><input type="checkbox" data-file="2019./2020. (62.)|z|7|r"><a href="natjecanja/tk_2019_zupanijsko_7r_rjesenja.pdf" target="_blank" title="Rješenja, 7. razred, županijsko, 2019./2020. (62.)">R</a></label></span>
+</td>
+<td align="center">
+<span class="file-option"><label><input type="checkbox" data-file="2019./2020. (62.)|z|8|z"><a href="natjecanja/tk_2019_zupanijsko_8r_zadaci.pdf" target="_blank" title="Zadaci, 8. razred, županijsko, 2019./2020. (62.)">Z</a></label></span>
+<span class="file-option"><label><input type="checkbox" data-file="2019./2020. (62.)|z|8|r"><a href="natjecanja/tk_2019_zupanijsko_8r_rjesenja.pdf" target="_blank" title="Rješenja, 8. razred, županijsko, 2019./2020. (62.)">R</a></label></span>
+</td>
+<td align="center">
+<span class="file-option">–</span>
+<span class="file-option">–</span>
+</td>
+<td align="center">
+<span class="file-option">–</span>
+<span class="file-option">–</span>
+</td>
+<td align="center">
+<span class="file-option">–</span>
+<span class="file-option">–</span>
+</td>
+<td align="center">
+<span class="file-option">–</span>
+<span class="file-option">–</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>
+  <button id="dl" disabled>Preuzmi odabrano (ZIP)</button>
+  <button id="clr">Poništi odabir</button>
+  <span id="cnt">Odabrano: 0 datoteka</span>
+</p>
+<p id="msg"></p>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script>
+/* ===== POSTAVKE – prilagodi ===== */
+const BASE = "natjecanja/";
+const YEARS = ["2025./2026. (68.)", "2024./2025. (67.)", "2023./2024. (66.)", "2022./2023. (65.)", "2021./2022. (64.)", "2020./2021. (63.)", "2019./2020. (62.)"];
+/* ================================= */
+const LEVELS = [["s","Školsko","skolsko"],["z","Županijsko","zupanijsko"],["d","Državno","drzavno"]];
+const GRADES = [5,6,7,8];
+const sel = new Set();
+const available = new Set(["2024./2025. (67.)|s|5|z", "2024./2025. (67.)|s|5|r", "2024./2025. (67.)|s|6|z", "2024./2025. (67.)|s|6|r", "2024./2025. (67.)|s|7|z", "2024./2025. (67.)|s|7|r", "2024./2025. (67.)|s|8|z", "2024./2025. (67.)|s|8|r", "2024./2025. (67.)|z|5|z", "2024./2025. (67.)|z|5|r", "2024./2025. (67.)|z|6|z", "2024./2025. (67.)|z|6|r", "2024./2025. (67.)|z|7|z", "2024./2025. (67.)|z|7|r", "2024./2025. (67.)|z|8|z", "2024./2025. (67.)|z|8|r", "2023./2024. (66.)|s|5|z", "2023./2024. (66.)|s|5|r", "2023./2024. (66.)|s|6|z", "2023./2024. (66.)|s|6|r", "2023./2024. (66.)|s|7|z", "2023./2024. (66.)|s|7|r", "2023./2024. (66.)|s|8|z", "2023./2024. (66.)|s|8|r", "2023./2024. (66.)|z|5|z", "2023./2024. (66.)|z|6|z", "2023./2024. (66.)|z|7|z", "2023./2024. (66.)|z|8|z", "2023./2024. (66.)|d|5|z", "2023./2024. (66.)|d|5|r", "2023./2024. (66.)|d|6|z", "2023./2024. (66.)|d|6|r", "2023./2024. (66.)|d|7|z", "2023./2024. (66.)|d|7|r", "2023./2024. (66.)|d|8|z", "2023./2024. (66.)|d|8|r", "2022./2023. (65.)|s|5|z", "2022./2023. (65.)|s|5|r", "2022./2023. (65.)|s|6|z", "2022./2023. (65.)|s|6|r", "2022./2023. (65.)|s|7|z", "2022./2023. (65.)|s|7|r", "2022./2023. (65.)|s|8|z", "2022./2023. (65.)|s|8|r", "2022./2023. (65.)|z|5|z", "2022./2023. (65.)|z|5|r", "2022./2023. (65.)|z|6|z", "2022./2023. (65.)|z|6|r", "2022./2023. (65.)|z|7|z", "2022./2023. (65.)|z|7|r", "2022./2023. (65.)|z|8|z", "2022./2023. (65.)|z|8|r", "2022./2023. (65.)|d|5|z", "2022./2023. (65.)|d|5|r", "2022./2023. (65.)|d|6|z", "2022./2023. (65.)|d|6|r", "2022./2023. (65.)|d|7|z", "2022./2023. (65.)|d|7|r", "2022./2023. (65.)|d|8|z", "2022./2023. (65.)|d|8|r", "2021./2022. (64.)|s|5|z", "2021./2022. (64.)|s|5|r", "2021./2022. (64.)|s|6|z", "2021./2022. (64.)|s|6|r", "2021./2022. (64.)|s|7|z", "2021./2022. (64.)|s|7|r", "2021./2022. (64.)|z|5|z", "2021./2022. (64.)|z|5|r", "2021./2022. (64.)|z|6|z", "2021./2022. (64.)|z|6|r", "2021./2022. (64.)|z|7|z", "2021./2022. (64.)|z|7|r", "2021./2022. (64.)|z|8|z", "2021./2022. (64.)|z|8|r", "2021./2022. (64.)|d|5|z", "2021./2022. (64.)|d|5|r", "2021./2022. (64.)|d|6|z", "2021./2022. (64.)|d|6|r", "2021./2022. (64.)|d|7|z", "2021./2022. (64.)|d|7|r", "2021./2022. (64.)|d|8|z", "2021./2022. (64.)|d|8|r", "2020./2021. (63.)|s|5|z", "2020./2021. (63.)|s|5|r", "2020./2021. (63.)|s|6|z", "2020./2021. (63.)|s|6|r", "2020./2021. (63.)|s|7|z", "2020./2021. (63.)|s|7|r", "2020./2021. (63.)|s|8|z", "2020./2021. (63.)|s|8|r", "2020./2021. (63.)|z|5|z", "2020./2021. (63.)|z|5|r", "2020./2021. (63.)|z|6|z", "2020./2021. (63.)|z|6|r", "2020./2021. (63.)|z|7|z", "2020./2021. (63.)|z|7|r", "2020./2021. (63.)|z|8|z", "2020./2021. (63.)|z|8|r", "2020./2021. (63.)|d|5|z", "2020./2021. (63.)|d|5|r", "2020./2021. (63.)|d|6|z", "2020./2021. (63.)|d|6|r", "2020./2021. (63.)|d|7|z", "2020./2021. (63.)|d|7|r", "2020./2021. (63.)|d|8|z", "2020./2021. (63.)|d|8|r", "2019./2020. (62.)|s|5|z", "2019./2020. (62.)|s|5|r", "2019./2020. (62.)|s|6|z", "2019./2020. (62.)|s|6|r", "2019./2020. (62.)|s|7|z", "2019./2020. (62.)|s|7|r", "2019./2020. (62.)|s|8|z", "2019./2020. (62.)|s|8|r", "2019./2020. (62.)|z|5|z", "2019./2020. (62.)|z|5|r", "2019./2020. (62.)|z|6|z", "2019./2020. (62.)|z|6|r", "2019./2020. (62.)|z|7|z", "2019./2020. (62.)|z|7|r", "2019./2020. (62.)|z|8|z", "2019./2020. (62.)|z|8|r"]);
+const key = (y,l,g,t) => [y,l,g,t].join("|");
+const exists = k => available.has(k);
+const fname = (y,l,g,t) => `tk_${y.slice(0,4)}_${LEVELS.find(x=>x[0]===l)[2]}_${g}r_${t==="z"?"zadaci":"rjesenja"}.pdf`;
+
+function filterOf(cb){
+  return cb.dataset.yr ? (y => y===cb.dataset.yr)
+    : cb.dataset.gr ? ((y,l,g) => l===cb.dataset.lvl && g==cb.dataset.gr)
+    : ((y,l) => l===cb.dataset.lvl);
+}
+function allKeys(f){
+  const out = [];
+  YEARS.forEach(y => LEVELS.forEach(([l]) => GRADES.forEach(g => ["z","r"].forEach(t => {
+    const k = key(y,l,g,t);
+    if (exists(k) && f(y,l,g)) out.push(k);
+  }))));
+  return out;
+}
+function selectedType(){
+  return document.querySelector('input[name=t]:checked').value;
+}
+function chosen(){
+  const m = selectedType();
+  return [...sel].filter(k => m==="both" || k.split("|")[3]===m);
+}
+function refresh(){
+  const type = selectedType();
+  document.querySelectorAll("input[data-file]").forEach(cb => {
+    cb.checked = sel.has(cb.dataset.file);
+    cb.disabled = type!=="both" && cb.dataset.file.split("|")[3]!==type;
+  });
+  document.querySelectorAll("#tbl input[data-file]").forEach(cb => {
+    cb.closest(".file-option").classList.toggle("selected", sel.has(cb.dataset.file));
+  });
+  const n = chosen().length;
+  document.getElementById("cnt").textContent = "Odabrano: " + n + " datoteka";
+  document.getElementById("dl").disabled = n===0;
+  document.getElementById("clr").disabled = n===0;
+  document.querySelectorAll("input[data-yr],input[data-lvl]").forEach(cb => {
+    const ks = allKeys(filterOf(cb)).filter(k => type==="both" || k.split("|")[3]===type);
+    const c = ks.filter(k => sel.has(k)).length;
+    cb.checked = ks.length>0 && c===ks.length;
+    cb.indeterminate = c>0 && c<ks.length;
+  });
+}
+
+refresh();
+
+document.getElementById("tbl").addEventListener("change", e => {
+  const cb = e.target; if (cb.type!=="checkbox") return;
+  if (cb.dataset.file) {
+    cb.checked ? sel.add(cb.dataset.file) : sel.delete(cb.dataset.file);
+    refresh();
+    return;
+  }
+  const type = selectedType();
+  allKeys(filterOf(cb)).filter(k => type==="both" || k.split("|")[3]===type)
+    .forEach(k => cb.checked ? sel.add(k) : sel.delete(k));
+  refresh();
+});
+document.querySelectorAll("input[name=t]").forEach(r => r.addEventListener("change", refresh));
+document.getElementById("clr").onclick = () => { sel.clear(); refresh(); };
+
+document.getElementById("dl").onclick = async () => {
+  const msg = document.getElementById("msg"), btn = document.getElementById("dl");
+  const zip = new JSZip(); let ok = 0; const fail = [];
+  btn.disabled = true; msg.textContent = "Pripremam ZIP…";
+  for (const k of chosen()) {
+    const [y,l,g,t] = k.split("|"), name = fname(y,l,g,t);
+    try {
+      const r = await fetch(BASE+name);
+      if (!r.ok) throw 0;
+      zip.file(name, await r.blob()); ok++;
+    } catch(_) { fail.push(name); }
+  }
+  if (ok) {
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(await zip.generateAsync({type:"blob"}));
+    a.download = "tk_natjecanja.zip"; a.click();
+  }
+  msg.textContent = fail.length ? `Preuzeto: ${ok}. Nije uspjelo: ${fail.join(", ")}` : `Gotovo, preuzeto datoteka: ${ok}.`;
+  btn.disabled = false;
+};
+</script>
+</body>
+</html>

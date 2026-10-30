@@ -27,7 +27,9 @@
   <label><input type="radio" name="t" value="r"> rješenja</label>
 </p>
 
-<div style="overflow-x:auto; white-space: nowrap;"><table id="tbl" border="1" cellpadding="4" cellspacing="0"></table></div>
+<div style="overflow-x:auto; white-space: nowrap;"><table id="tbl" border="1" cellpadding="4" cellspacing="0">
+<!-- GENERATED_TABLE -->
+</table></div>
 
 <p>
   <button id="dl" disabled>Preuzmi odabrano (ZIP)</button>
@@ -40,58 +42,15 @@
 <script>
 /* ===== POSTAVKE – prilagodi ===== */
 const BASE = "natjecanja/";
-const YEARS = ["2025./2026. (68.)", "2024./2025. (67.)", "2023./2024. (66.)", "2022./2023. (65.)", "2021./2022. (64.)", "2020./2021. (63.)", "2019./2020. (62.)"];
+const YEARS = __GENERATED_YEARS__;
 /* ================================= */
 const LEVELS = [["s","Školsko","skolsko"],["z","Županijsko","zupanijsko"],["d","Državno","drzavno"]];
 const GRADES = [5,6,7,8];
 const sel = new Set();
-const available = new Set();
+const available = new Set(__GENERATED_FILES__);
 const key = (y,l,g,t) => [y,l,g,t].join("|");
 const exists = k => available.has(k);
 const fname = (y,l,g,t) => `tk_${y.slice(0,4)}_${LEVELS.find(x=>x[0]===l)[2]}_${g}r_${t==="z"?"zadaci":"rjesenja"}.pdf`;
-
-async function checkAvailability(){
-  const keys = [];
-  YEARS.forEach(y => LEVELS.forEach(([l]) => GRADES.forEach(g => ["z","r"].forEach(t => keys.push(key(y,l,g,t))))));
-  let next = 0;
-  const workers = Array.from({length: 8}, async () => {
-    while (next < keys.length) {
-      const k = keys[next++];
-      const [y,l,g,t] = k.split("|");
-      const name = fname(y,l,g,t);
-      const response = await fetch(BASE+name, {method: "HEAD"});
-      if (response.ok) {
-        available.add(k);
-      } else if (response.status!==404 && response.status!==410) {
-        throw new Error(`Provjera datoteke ${name} nije uspjela (HTTP ${response.status}).`);
-      }
-    }
-  });
-  await Promise.all(workers);
-}
-
-function build(){
-  let h = '<thead><tr><th rowspan="2">Godina</th>';
-  LEVELS.forEach(([l,n]) => h += `<th colspan="4"><label><input type="checkbox" data-lvl="${l}"> ${n}</label></th>`);
-  h += '</tr><tr>';
-  LEVELS.forEach(([l]) => GRADES.forEach(g => h += `<th><label><input type="checkbox" data-lvl="${l}" data-gr="${g}"> ${g}.</label></th>`));
-  h += '</tr></thead><tbody>';
-  YEARS.forEach(y => {
-    h += `<tr><td><label><input type="checkbox" data-yr="${y}"> ${y}</label></td>`;
-    LEVELS.forEach(([l,n]) => GRADES.forEach(g => {
-      h += '<td align="center">';
-      ["z","r"].forEach(t => {
-        const k = key(y,l,g,t);
-        h += exists(k)
-          ? `<span class="file-option"><label><input type="checkbox" data-file="${k}"><a href="${BASE+fname(y,l,g,t)}" target="_blank" title="${t==="z"?"Zadaci":"Rješenja"}, ${g}. razred, ${n.toLowerCase()}, ${y}">${t.toUpperCase()}</a></label></span>`
-          : '<span class="file-option">–</span>';
-      });
-      h += '</td>';
-    }));
-    h += '</tr>';
-  });
-  document.getElementById("tbl").innerHTML = h + '</tbody>';
-}
 
 function filterOf(cb){
   return cb.dataset.yr ? (y => y===cb.dataset.yr)
@@ -134,21 +93,7 @@ function refresh(){
   });
 }
 
-async function initialize(){
-  const msg = document.getElementById("msg");
-  msg.textContent = "Provjeravam dostupnost datoteka…";
-  try {
-    await checkAvailability();
-    build();
-    refresh();
-    msg.textContent = "";
-  } catch (error) {
-    console.error("Provjera dostupnosti datoteka nije uspjela.", error);
-    msg.textContent = `Provjera dostupnosti datoteka nije uspjela: ${error.message}`;
-  }
-}
-
-initialize();
+refresh();
 
 document.getElementById("tbl").addEventListener("change", e => {
   const cb = e.target; if (cb.type!=="checkbox") return;
