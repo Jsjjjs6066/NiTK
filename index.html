@@ -5,7 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Natjecanja iz TK – zadaci i rješenja</title>
 <style>
-.file-option { display: block; }
+.file-option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  height: 1.5em;
+}
 .file-option + .file-option { border-top: 1px solid #ccc; }
 .file-option.selected { background-color: lightgreen; }
 </style>
@@ -21,7 +27,7 @@
   <label><input type="radio" name="t" value="r"> rješenja</label>
 </p>
 
-<div style="overflow-x:auto"><table id="tbl" border="1" cellpadding="4" cellspacing="0"></table></div>
+<div style="overflow-x:auto; white-space: nowrap;"><table id="tbl" border="1" cellpadding="4" cellspacing="0"></table></div>
 
 <p>
   <button id="dl" disabled>Preuzmi odabrano (ZIP)</button>
